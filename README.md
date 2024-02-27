@@ -46,7 +46,8 @@ public class Main
 }
 ```
 Note: **JFrame** is part of the **javax.swing** package, so we need to import it first to use it.
-Note2: using **var** is the same as using **JFrame**.
+Note 2: using **var** is the same as using **JFrame**.
+Note 3: **var** will cause errors on really old versions of Java, but I don't think you would be using those anyway.
 ```java
 // These are the same!
 JFrame frame = new JFrame("Frame");
@@ -141,8 +142,8 @@ There is also:
 Change the code to see the difference.
 ### Box Layout
 This layout places items in a line from **left to right** or **top to bottom**.
-- **Left to right** uses BoxLayout.X_ALIGN
-- **Top to bottom** uses BoxLayout.Y_ALIGN
+- **Left to right** uses **BoxLayout.X_ALIGN**
+- **Top to bottom** uses **BoxLayout.Y_ALIGN**
 The constructor is a bit special. Here is a *left to right* example:
 ```java
 var layout = new BoxLayout( frame, X_ALIGN );
