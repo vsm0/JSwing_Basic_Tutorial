@@ -227,7 +227,7 @@ var layout = new BoxLayout( frame, X_ALIGN );
 frame.setLayout(layout);
 ```
 
-Basically, items placed **left to right** are **aligned on the x-axis**, while items places **top to bottom** are **aligned on the y-axis**.
+Basically, items placed **left to right** are **aligned on the x-axis**, while items placed **top to bottom** are **aligned on the y-axis**.
 
 Thus, **X_ALIGN** and **Y_ALIGN**.
 
