@@ -179,7 +179,7 @@ Let's *not* use a **Layout** to see what happens.
 
 ```java
 var label1 = new JLabel("Hello");
-var label2 = new JLabel("World");
+var label2 = new JLabel("Swing");
 
 frame.add(label1);
 frame.add(label2);
