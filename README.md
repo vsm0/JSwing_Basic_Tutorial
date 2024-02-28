@@ -227,6 +227,10 @@ There is also:
 
 Change the code to see the difference.
 
+Code for this example: src/SwingFlow.java
+
+![SwingFlow](./assets/SwingFlow.png)
+
 ### Box Layout
 
 This layout places items in a line from **left to right** or **top to bottom**.
