@@ -241,7 +241,7 @@ This layout places items in a line from **left to right** or **top to bottom**.
 
 - **Top to bottom** uses **BoxLayout.Y_AXIS**
 
-We can't **setLayout** on the frame; we first make a panel to hold our content.
+We can't **setLayout** on the frame directly when using **BoxLayout**; we first make a panel to hold our content.
 
 The constructor is a bit special. Here is a *left to right* example:
 
@@ -253,6 +253,13 @@ frame.add(panel);
 var layout = new BoxLayout( panel, BoxLayout.X_AXIS );
 
 panel.setLayout(layout);
+```
+
+Now, instead of adding items to our frame, we add them to the content panel:
+
+```java
+panel.add(label1);
+panel.add(label2);
 ```
 
 Basically, items placed **left to right** are **aligned on the x-axis**, while items placed **top to bottom** are **aligned on the y-axis**.
