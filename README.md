@@ -153,7 +153,7 @@ frame.setLocationRelativeTo(null); // (1)
 frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE); // (2)
 ```
 
-The code for the following screenshot can be found in src/HelloSwing:
+Code for this example: src/HelloSwing.java
 
 ![HelloSwing](./assets/HelloSwing.png)
 
@@ -188,6 +188,10 @@ frame.add(label2);
 If you run this, only **label2** "World" will be displayed.
 
 This is because the *default* layout is **BorderLayout** which (to keep it simple) only shows **one** item at a time when you **frame.add(...)** items.
+
+Code for this example: src/NoLayout.java
+
+![NoLayout](./assets/NoLayout.png)
 
 ### Flow Layout
 
