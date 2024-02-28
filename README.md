@@ -153,6 +153,10 @@ frame.setLocationRelativeTo(null); // (1)
 frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE); // (2)
 ```
 
+The code for the following screenshot can be found in src/HelloSwing:
+
+![HelloSwing](./assets/HelloSwing.png)
+
 ## Layouts
 
 **Layouts** tell a frame how to position components (buttons, panels, etc...).

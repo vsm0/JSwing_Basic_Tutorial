@@ -26,6 +26,7 @@ public class HelloSwing extends JFrame
 		// Let swing start the program later
 		// when it's ready
 		SwingUtilities.invokeLater(
-			() -> new HelloSwing();
+			() -> new HelloSwing()
 		);
 	}
+}
