@@ -189,7 +189,15 @@ This is because the *default* layout is **BorderLayout** which (to keep it simpl
 
 Let's display the labels **side by side**.
 
-First, we **create** the layout, then we **set** the frame's layout.
+First, we import AWT packages that contain Layout classes:
+
+```java
+import java.awt.*;
+```
+
+Note: every project using layouts needs to import **java.awt** packages.
+
+Second, we **create** the layout, then we **set** the frame's layout.
 
 ```java
 var layout = new FlowLayout();
