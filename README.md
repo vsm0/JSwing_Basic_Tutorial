@@ -233,23 +233,35 @@ Code for this example: src/SwingFlow.java
 
 ### Box Layout
 
+**Notice: I made a mistake in this part. With the updated code, you should first read the section on JPanel.**
+
 This layout places items in a line from **left to right** or **top to bottom**.
 
-- **Left to right** uses **BoxLayout.X_ALIGN**
+- **Left to right** uses **BoxLayout.X_AXIS**
 
-- **Top to bottom** uses **BoxLayout.Y_ALIGN**
+- **Top to bottom** uses **BoxLayout.Y_AXIS**
+
+We can't **setLayout** on the frame; we first make a panel to hold our content.
 
 The constructor is a bit special. Here is a *left to right* example:
 
 ```java
-var layout = new BoxLayout( frame, X_ALIGN );
+var panel = new JPanel();
 
-frame.setLayout(layout);
+frame.add(panel);
+
+var layout = new BoxLayout( panel, BoxLayout.X_AXIS );
+
+panel.setLayout(layout);
 ```
 
 Basically, items placed **left to right** are **aligned on the x-axis**, while items placed **top to bottom** are **aligned on the y-axis**.
 
-Thus, **X_ALIGN** and **Y_ALIGN**.
+Thus, **X_AXIS** and **Y_AXIS**.
+
+Code for this example: src/SwingBox.java
+
+![SwingBox](./assets/SwingBox.png)
 
 ### Grid Layout
 
