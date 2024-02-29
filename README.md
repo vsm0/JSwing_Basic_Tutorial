@@ -363,7 +363,7 @@ The obvious solution is to set the panel's layout.
 This example displays the previous three items from **top to bottom**:
 
 ```java
-var layout = new BoxLayout( panel, Y_ALIGN );
+var layout = new BoxLayout( panel, BoxLayout.Y_AXIS );
 
 panel.setLayout( layout );
 ```
