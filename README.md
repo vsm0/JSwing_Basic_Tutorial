@@ -394,10 +394,18 @@ So we don't have to change the source, we can just **scale** the image. A bit mo
 1) Make a **BufferredImage**:
 
 ```java
+String path = "path/to/file";
+Buffered image;
+
 try
 {
     var file = new File("path/to/file");
-    var image = ImageIO.read(file);
+    image = ImageIO.read(file);
+}
+catch (IOException e)
+{
+    e.printStackTrace();
+}
 ```
 
 2) Choose a resolution (W x H) to scale the image, for example **50x50**:
@@ -417,23 +425,6 @@ var label = new JLabel(icon);
 
 ```java
 import java.io.*;
-import java.awt.*;
-import java.awt.image.*;
 import javax.swing.*;
 import javax.imageio.*;
-```
-
-**Note:** If you get missing exception errors or something, its because you have to wrap the image creation code in a **try ... catch** block:
-
-```java
-try
-{
-    var file ...
-    ...
-    var label ...
-}
-catch (IOException e)
-{
-    e.printStackTrace();
-}
 ```
