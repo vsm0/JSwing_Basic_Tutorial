@@ -2,7 +2,7 @@
 
 This is a simple tutorial for using Java **AWT** and **Swing**.
 
-I don't introduce **Java**.
+This is **not** and intro to **Java**.
 
 When following the examples, try to type and run the code yourself. It will help the learning process.
 
@@ -369,3 +369,71 @@ panel.setLayout( layout );
 ```
 
 The panel **p** might look invisible, but it is there.
+
+## Images
+
+**Note: a quick and dirty tuto just in case anyone wants to know how to do this. I will do this properly later.**
+
+**Btw: this is untested, but should give you an idea on how to get started or understand some example code just in case you take help from videos, code or AI**
+
+### Basic Image
+
+To quickly get a picture on-screen, we need to add an ImageIcon to a JLabel.
+
+```java
+var image = new ImageIcon("path/to/file");
+var label = new JLabel(image);
+```
+
+### Scaled Image
+
+The problem with the previous code is that the image will be its real pixel size.
+
+So we don't have to change the source, we can just **scale** the image. A bit more setup is needed though.
+
+1) Make a **BufferredImage**:
+
+```java
+try
+{
+    var file = new File("path/to/file");
+    var image = ImageIO.read(file);
+```
+
+2) Choose a resolution (W x H) to scale the image, for example **50x50**:
+
+```java
+var scaledImage = image.getScaledInstance(50, 50, SCALE_SMOOTH);
+```
+
+3) Set the scaled image to the label icon:
+
+```java
+var icon = new ImageIcon(scaledImage);
+var label = new JLabel(icon);
+```
+
+4) Don't forget the neccessary imports:
+
+```java
+import java.io.*;
+import java.awt.*;
+import java.awt.image.*;
+import javax.swing.*;
+import javax.imageio.*;
+```
+
+**Note:** If you get missing exception errors or something, its because you have to wrap the image creation code in a **try ... catch** block:
+
+```java
+try
+{
+    var file ...
+    ...
+    var label ...
+}
+catch (IOException e)
+{
+    e.printStackTrace();
+}
+```
